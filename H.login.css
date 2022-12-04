@@ -1,0 +1,150 @@
+html, body    {
+ display: grid;
+ height: 100%;
+ width: 100%;
+ place-items: center; /*perintah agar berada di tengah*/
+ background: linear-gradient(to right, rgba(75, 123, 211, 0.5), rgba(22, 215, 177, 0.3));
+ box-sizing: border-box;
+} 
+
+::selection{
+    background: fixed;
+    color: #1abc9c;
+}
+
+/* kotakan pada form*/
+.wrapper   {
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 15px 5px 20px rgba(255, 3, 3, 0.1);
+}
+
+/* judul pada Login Form */
+.wrapper .title{
+font-size: 35px; 
+font-weight: 600;
+text-align: center;
+line-height: 100px;
+background: radial-gradient(#9797b6, #1cb5e0); /*gradien warna*/
+user-select: none;
+border-radius: 20px 20px 0px 00px;
+background: linear-gradient(-135deg,);
+}
+
+.wrapper form{
+    padding: 10px 50px 50px 30px;
+    border-radius: 0px 0px 20px 20px;
+    background: white;
+}
+
+.wrapper form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.wrapper form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 10px;    
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus, 
+form .field input:valid{
+    border-color: #3498db;
+
+}
+
+.wrapper form .field label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: rgb(35, 35, 214);
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+/* digunakan untuk membuat animasi ketika kursor mengarah ke masukkan email & pass */
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+    top: 0%;
+    font-size: 16px;
+    color: "#27ae60";
+    background:white;
+    transform: translateY(-50%);
+}
+
+.form content{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form .content .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .content input{
+    width: 15px;
+    height: 15px;
+    background: red;
+}
+
+form .content label{
+    color: black;
+    user-select: none;
+    padding-left: 5px;
+}
+
+form .content .pass-link{
+    color: rgb(11, 26, 243) ;
+}
+
+/*Login Button*/
+form .field input[type="submit"]{
+    color: black;
+    background: radial-gradient(#9797b6, #1cb5e0);
+    border: none;
+    padding-left: 0;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, );
+    transition: all 0.3s ease;
+}
+
+form .field input[type="submit"]:active{
+    transform: scale(0.95);
+}
+
+form .signup-link {
+    color: rgb(86, 94, 172);
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .pass-link a,
+form .signup-link a{
+    color: black;
+    text-decoration: none;
+}
+
+form .pass-link a:hover,
+form .signup-link a:hover{
+    text-decoration: underline;
+}
+
